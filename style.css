@@ -1,86 +1,115 @@
-/* // Resetear el estilo por defecto */
+/* Basic Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.body {
-    font-family: 'poppins', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    /* Ligero */
 }
 
-header {
-    background: #191510;
-    padding: 10px 25px;
-}
-
-.nav-container {
+/* Navbar Styles */
+.navbar {
     display: flex;
     justify-content: flex-end;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
     align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
 }
 
-.nav-links li {
-    margin: 0 25px;
-    /* Espaciado entre los elementos */
+/* Hide checkbox by default */
+#menu-toggle {
+    display: none;
 }
 
-.nav-links a {
+/* Hamburger icon styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Menu Styles */
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: white;
     text-decoration: none;
-    /* Eliminar el subrayado de los enlaces */
-    color: grey;
-    /* Color del texto */
-    transition: color 0.3s;
-    /* Transición suave al cambiar el color */
-    font-size: 18px;
-    border: solid 1px grey;
-    border-radius: 8px;
+    font-size: 1.3em;
+    position: relative;
     padding: 6px 12px;
-    transition: color 0.3s, transform 0.3s;
-    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.nav-links a:hover {
+/* Hover effect with gradient */
+.menu li a:hover {
     transform: scale(1.1);
-    /* Aumentar el tamaño al 110% */
-    color: #fff;
-    /* Cambiar el color del texto al hacer hover */
+    /* Increase size by 110% */
     background-image: linear-gradient(to right, #ffffff, #87ceeb, #e2acdc);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 6px 12px;
-    /* Mantener el mismo padding */
+    border: 2px solid #f4e5f3;
+    /* Border appears on hover */
+    border-radius: 15px;
 }
 
-/* Reset de estilos para el botón */
+/* Mobile Menu Hidden */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    /* Show the menu when the checkbox is checked */
+    #menu-toggle:checked+.hamburger+.menu {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 15px 0;
+    }
+}
+
+/* Button Styles */
 button {
     background: transparent;
-    /* Sin fondo */
     border: none;
-    /* Sin borde */
     color: grey;
-    /* Color del texto */
     font-size: 24px;
-    /* Tamaño de fuente más grande */
     cursor: pointer;
-    /* Cambia el cursor al pasar sobre el botón */
     padding: 10px 20px;
-    /* Espaciado interno para hacerlo más grande */
-    transition: color 0.3s;
-    /* Transición suave para el color */
+    transition: color 0.3s, transform 0.3s;
 }
 
 button:hover {
     color: #fff;
-    /* Cambia el color del texto al pasar el mouse */
     transform: scale(1.2);
 }
 
