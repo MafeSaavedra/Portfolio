@@ -1,0 +1,95 @@
+/* // Resetear el estilo por defecto */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: 'poppins', sans-serif;
+    font-weight: 300;
+    /* Ligero */
+}
+
+header {
+    background: #191510;
+    padding: 10px 25px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 25px;
+    /* Espaciado entre los elementos */
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* Eliminar el subrayado de los enlaces */
+    color: grey;
+    /* Color del texto */
+    transition: color 0.3s;
+    /* Transición suave al cambiar el color */
+    font-size: 18px;
+    border: solid 1px grey;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    /* Aumentar el tamaño al 110% */
+    color: #fff;
+    /* Cambiar el color del texto al hacer hover */
+    background-image: linear-gradient(to right, #ffffff, #87ceeb, #e2acdc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 6px 12px;
+    /* Mantener el mismo padding */
+}
+
+/* Reset de estilos para el botón */
+button {
+    background: transparent;
+    /* Sin fondo */
+    border: none;
+    /* Sin borde */
+    color: grey;
+    /* Color del texto */
+    font-size: 24px;
+    /* Tamaño de fuente más grande */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    padding: 10px 20px;
+    /* Espaciado interno para hacerlo más grande */
+    transition: color 0.3s;
+    /* Transición suave para el color */
+}
+
+button:hover {
+    color: #fff;
+    /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.2);
+}
+
+section {
+    margin: 20px 0;
+    /* Espaciado entre secciones */
+    padding: 50px;
+    border: 1px solid #ccc;
+    /* Borde para las secciones */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+}
