@@ -122,80 +122,77 @@ main {
     height: 100vh;
     background-color: #332f33;
     margin-left: 28%;
-    /* Reduce el margen para darle más espacio a las secciones */
     width: 72%;
 }
 
-/* View with Fixed Position */
 .View {
     position: fixed;
-    top: 13.8vh;
+    top: 15vh;
     left: 30px;
     background-color: #0a0a0a8b;
     width: 25%;
-    height: 650px;
+    height: 82%;
     border-radius: 15px;
     border: 1px solid #0a0a0a;
     z-index: 999;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* Sections inside the grid */
-.inicio,
-.Sobremi,
-.Proyectos,
-.Contacto {
-    background-color: #0a0a0a8b;
-    width: 100%;
-    /* Ancho completo en móviles */
-    height: 595px;
-    margin: 0 auto 25px;
-    border-radius: 15px;
-    border: 1px solid #0a0a0a;
-    text-align: center;
-}
 
-@media (max-width: 768px) {
 
-    /* Hacer que .View y main tomen un flujo normal */
+
+/* START Mobile Style ------------------------------------------------*/
+@media (min-width: 320px) and (max-width: 700px) {
+
+    .inicio,
+    .Sobremi,
+    .Contacto {
+        background-color: #0a0a0a8b;
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: 800px;
+        margin-bottom: 25px;
+        margin-top: 120px;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+
+
+
     .View {
         position: relative;
-        /* Elimina la posición fija */
-        width: 80%;
-        height: 620px;
-        border-radius: 15px;
+        width: 81%;
+        height: 700px;
         top: auto;
         left: auto;
         margin: 0 auto 20px;
-        /* Agrega un margen inferior */
+    }
+
+    .Titulo {
+        margin-top: 11px;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
     }
 
     main {
         top: 700px;
         margin-left: 0;
-        /* Elimina el margen lateral */
         padding: 0 10px;
-        /* Ajuste de padding para pantallas pequeñas */
         height: auto;
-        /* Deja que el contenido defina la altura */
         position: absolute;
         width: 100%;
-
     }
 
-    /* Ajusta el tamaño de las secciones dentro del main para que se adapten */
-    .inicio,
-    .Sobremi,
-    .Proyectos,
-    .Contacto {
-        width: 100%;
-        /* Ancho completo en móviles */
-        height: 450px;
-        /* Altura automática para evitar problemas de tamaño */
-        margin-bottom: 50px;
-        /* Añadir un espacio entre las secciones */
-    }
 
     .Avatar {
         display: flex;
@@ -204,142 +201,593 @@ main {
         padding: 10px;
     }
 
+
     .Avatar img {
         width: 80%;
         max-width: 200px;
-        /* Limitar el tamaño en dispositivos pequeños */
         height: auto;
     }
-}
 
-/* Contenido del view*/
-.Titulo {
-    font-size: 25px;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-}
 
-.Avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 
-.Avatar img {
-    width: 200px;
-    height: auto;
-}
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
 
-.Subtitle {
-    margin-top: 12px;
-    font-size: 22px;
-}
 
-/* //Botones sociales */
-.btn-trabajar {
-    background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 15px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    /* Fuente Poppins con peso 400 */
-    transition: background-color 0.3s ease;
-}
 
-.btn-trabajar:hover {
-    background-color: #5b95a8;
-    /* Color más oscuro al pasar el mouse */
-}
-
-.botones-sociales button {
-    margin: 5px;
-    border-radius: 15px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.botones-sociales button:hover {
-    transform: scale(1.4);
-
-    /* Sombra azul brillante */
-}
-
-/* //contenidos del body  PRIMERA SECCIÓN*/
-.contenido-inicio {
-    margin-top: 150px;
-    text-align: center;
-    font-weight: 400;
-
-}
-
-.contenido-inicio p {
-    color: white;
-    font-size: 50px;
-    font-weight: 300;
-
-}
-
-.titulo-rosa {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    background: linear-gradient(to right, #569dd7, #ff69b4);
-    /* Gradiente de rosado a un tono más oscuro */
-    -webkit-background-clip: text;
-    /* Clip el gradiente al texto */
-    -webkit-text-fill-color: transparent;
-    /* Hace que el color del texto sea transparente para que se vea el gradiente */
-    background-clip: text;
-    /* Soporte para navegadores sin prefijo */
-}
-
-/* Estilos para los botones */
-.botones-inicio {
-    margin-top: 40px;
-}
-
-button {
-    font-family: 'Poppins', sans-serif;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 400;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Botón para Descargar CV */
-.btn-descargar {
-    background-color: #6faac0;
-    /* Azul claro */
-    color: white;
-    margin-right: 15px;
-}
-
-/* Botón para Mis trabajos */
-.btn-trabajos {
-    background-color: #ff69b4;
-    /* Color rosita */
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .botones-inicio button {
-        width: 100%;
-        margin-bottom: 10px;
     }
+
+    .contenido-inicio p {
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .botones-inicio button {
+        width: 84%;
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin: 20px;
+    }
+
+
+    .titulo-rosa {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        background: linear-gradient(to right, #569dd7, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        background-clip: text;
+        display: inline-block;
+        /* Asegúrate de que el texto sea un bloque en línea */
+        transition: transform 0.3s ease;
+        /* Transición suave para el crecimiento */
+    }
+
+    /* Efecto de hover */
+    .titulo-rosa:hover {
+        transform: scale(1.1);
+        /* Aumenta el tamaño de cada letra al hacer hover */
+    }
+
+    .btn-trabajar {
+        background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-trabajar:hover {
+        background-color: #5b95a8;
+    }
+
+    .botones-sociales button {
+        margin: 5px;
+        border-radius: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .botones-sociales button:hover {
+        transform: scale(1.4);
+    }
+
+    /* First Section Content */
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+
+    .botones-inicio {
+        margin-top: 40px;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 2px solid white;
+    }
+
+    /* Download CV Button */
+    .btn-descargar {
+        background-color: #6faac0;
+        color: white;
+        margin-right: 15px;
+    }
+
+    /* My Works Button */
+    .btn-trabajos {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+    .Proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 40px;
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        text-align: center;
+        padding: 40px;
+    }
+
+    /* Objetos dentro del contenedor */
+    .Objectos1 {
+        margin: 0 auto;
+        background-color: rgb(233, 225, 225);
+        height: 200px;
+        width: 70%;
+        border-radius: 25px;
+        padding: 10px;
+        /* Agrega un padding interno */
+        box-sizing: border-box;
+
+    }
+
+    .titulo-proyectos {
+        grid-column: 1 / -1;
+        margin-top: 10px;
+        font-size: 26px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+/* START Tablet Style ------------------------------------------------*/
+@media (min-width: 720px) and (max-width: 1024px) {
+    .View {
+        position: fixed;
+        top: 13vh;
+        left: 30px;
+        width: 28%;
+        height: 55%;
+        border-radius: 15px;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+
+    .Titulo {
+        margin-top: 11px;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+
+    .Avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+
+    .inicio,
+    .Sobremi,
+    .Proyectos,
+    .Contacto {
+        background-color: #0a0a0a8b;
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: 700px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+
+    .Avatar img {
+        width: 55%;
+        max-width: 160px;
+    }
+
+    .Titulo {
+        margin-top: 12px;
+        font-size: 19px;
+        padding: 8px;
+    }
+
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .contenido-inicio p {
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .botones-inicio button {
+        width: 55%;
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .btn-trabajar {
+        background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        width: 80%;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .titulo-rosa {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        background: linear-gradient(to right, #569dd7, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        background-clip: text;
+        display: inline-block;
+        /* Asegúrate de que el texto sea un bloque en línea */
+        transition: transform 0.3s ease;
+        /* Transición suave para el crecimiento */
+    }
+
+    /* Efecto de hover */
+    .titulo-rosa:hover {
+        transform: scale(1.1);
+        /* Aumenta el tamaño de cada letra al hacer hover */
+    }
+
+    .btn-trabajar {
+        background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 12px;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: background-color 0.4s ease;
+    }
+
+
+
+    .botones-sociales button {
+        margin: 5px;
+        border-radius: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .botones-sociales button:hover {
+        transform: scale(1.4);
+    }
+
+    /* First Section Content */
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    /* Button Styles */
+    .botones-inicio {
+        margin-top: 40px;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px white, 0 0 20px white;
+        /* Ilumina el borde */
+        transform: translateY(-2px);
+        /* Eleva el botón ligeramente */
+    }
+
+
+    /* Download CV Button */
+    .btn-descargar {
+        background-color: #6faac0;
+        color: white;
+        margin-right: 15px;
+    }
+
+    /* My Works Button */
+    .btn-trabajos {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+
+}
+
+/* fin estilo tablet ----------------------------------------- */
+
+
+
+@media (min-width: 1024px) and (max-width: 1800px) {
+
+    .inicio,
+    .Sobremi,
+    .Contacto {
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 600px;
+        margin: 10px auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .View {
+        position: fixed;
+        top: 16vh;
+        left: 30px;
+        width: 28%;
+        height: 650px;
+        border-radius: 15px;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+
+    .Titulo {
+        margin-top: 12px;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .Avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .Avatar img {
+        width: 170px;
+        height: auto;
+    }
+
+
+
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .contenido-inicio p {
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .botones-inicio button {
+        width: 55%;
+        font-size: 20px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .btn-trabajar {
+        background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 19px;
+        width: 80%;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .titulo-rosa {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        background: linear-gradient(to right, #569dd7, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+        background-clip: text;
+        display: inline-block;
+        /* Asegúrate de que el texto sea un bloque en línea */
+        transition: transform 0.3s ease;
+        /* Transición suave para el crecimiento */
+    }
+
+    /* Efecto de hover */
+    .titulo-rosa:hover {
+        transform: scale(1.1);
+        /* Aumenta el tamaño de cada letra al hacer hover */
+    }
+
+
+
+    .botones-sociales button {
+        margin: 5px;
+        border-radius: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .botones-sociales button:hover {
+        transform: scale(1.4);
+    }
+
+    /* First Section Content */
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    /* Button Styles */
+    .botones-inicio {
+        margin-top: 40px;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px white, 0 0 20px white;
+        /* Ilumina el borde */
+        transform: translateY(-2px);
+        /* Eleva el botón ligeramente */
+    }
+
+
+    /* Download CV Button */
+    .btn-descargar {
+        background-color: #6faac0;
+        color: white;
+        margin-right: 15px;
+    }
+
+    /* My Works Button */
+    .btn-trabajos {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+    .Proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 40px;
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 700px;
+        margin: 10px auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        padding: 40px;
+    }
+
+    /* Objetos dentro del contenedor */
+    .Objectos1 {
+        margin: 0 auto;
+        background-color: rgb(233, 225, 225);
+        height: 200px;
+        width: 70%;
+        border-radius: 25px;
+        padding: 10px;
+        /* Agrega un padding interno */
+        box-sizing: border-box;
+        /* Asegura que el padding no afecte el ancho */
+    }
+
+    .titulo-proyectos {
+        grid-column: 1 / -1;
+        /* Ocupa toda la fila */
+        margin-top: 10px;
+        /* Ajusta según sea necesario */
+        font-size: 26px;
+        /* Tamaño de fuente para el título */
+        color: white;
+        /* Color del texto */
+        text-align: center;
+        /* Centrar el texto */
+        padding: 10px;
+        /* Espaciado alrededor del título */
+        width: 100%;
+        /* Asegura que ocupe todo el ancho disponible */
+    }
+
 }
