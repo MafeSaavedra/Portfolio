@@ -27,10 +27,10 @@
             </label>
             <!-- Menu Links -->
             <ul class="menu">
-                <li><a href="#home" class="nav-link">Inicio</a></li>
-                <li><a href="#about" class="nav-link">Sobre Mi</a></li>
-                <li><a href="#services" class="nav-link">Proyectos</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobremi" class="nav-link">Sobre Mi</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <!-- Button for Dark Mode -->
             <button class="dark-mode" aria-label="Toggle dark mode">
@@ -41,30 +41,115 @@
 
 
     <main>
-        <section class="inicio">
+        <section id="inicio" class="inicio">
             <div class="contenido-inicio">
                 <p>Hola! Soy Mafe Saavedra.</p>
                 <p><span class="titulo-rosa">Desarrolladora Full Stack</span></p>
 
                 <!-- Botones -->
                 <div class="botones-inicio">
-                    <button class="btn-descargar">Descargar CV</button>
-                    <button class="btn-trabajos">Mis trabajos</button>
+                    <a href="img/MARIA_FERNANDA_SAAVEDRA_V3_CV.pdf" download="Mafe_Saavedra_CV.pdf">
+                        <button class="btn-descargar">Descargar CV</button>
+                    </a>
+                    <a href="#proyectos">
+                        <button class="btn-trabajos">Mis trabajos</button>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="Sobremi">Contenido Sobre Mí</section>
 
-        <section class="Proyectos">
-            <h2 class="titulo-proyectos">Mis Proyectos</h2>
-            <div class="Objectos1"> 1 </div>
-            <div class="Objectos1"> 2 </div>
-            <div class="Objectos1"> 3 </div>
-            <div class="Objectos1"> 4 </div>
+        <section id="sobremi" class="Sobremi">
+            <h2>Sobre Mí</h2>
+
+            <div class="bio-container">
+                <div class="bio-card">
+                    <h3>Perfil</h3>
+                    <p>Desarrolladora Full Stack y profesional en Ingeniería Biomédica con enfoque en el diseño y
+                        desarrollo
+                        de aplicaciones y sitios web</p>
+                </div>
+
+                <div class="bio-card">
+                    <h3>Experiencia en Ingeniería Biomédica</h3>
+                    <p>Propuesta e implementación de guías digitales para equipos clínicos usando códigos QR,
+                        optimizando el uso de recursos en una institución hospitalaria.</p>
+                </div>
+
+                <div class="bio-card">
+                    <h3>Desarrollo Web y Software</h3>
+                    <p> Desarrollé una aplicación en
+                        Flutter Flow para un hospital, enfocada en comunicación aumentativa.</p>
+                </div>
+
+                <div class="bio-card">
+                    <div class="tool-card">
+                        <img src="img\HTML.png" alt="HTML Logo" class="tool-logo">
+                    </div>
+                    <div class="tool-card">
+                        <img src="img\css.png" alt="CSS Logo" class="tool-logo">
+                    </div>
+                    <div class="tool-card">
+                        <img src="img\js.png" alt="JavaScript Logo" class="tool-logo">
+                    </div>
+                    <!-- <div class="tool-card">
+                        <img src="img/react-logo.png" alt="React Logo" class="tool-logo">
+                    </div>
+                    <div class="tool-card">
+                        <img src="img/git-logo.png" alt="Git Logo" class="tool-logo">
+                    </div>
+                    <div class="tool-card">
+                        <img src="img/python-logo.png" alt="Python Logo" class="tool-logo">
+                    </div> -->
+                </div>
+            </div>
         </section>
 
-        <section class="Contacto">Contenido de Contacto</section>
+
+        <section id="proyectos" class="Proyectos">
+            <h2 class="titulo-proyectos">Chequea Mis Proyectos</h2>
+            <div class="Objectos1">
+                <a href=" ">
+                    <img src="img\Hackathon.png" alt="Objectos1">
+                    <div class="info-box">Hackathon Project</div>
+                </a>
+            </div>
+            <div class="Objectos1">
+                <a href=" ">
+                    <img src="img\Ecommerce.png" alt="Objectos1">
+                    <div class="info-box">E-commerce Platform</div>
+                </a>
+            </div>
+            <div class="Objectos1">
+                <a href=" http://127.0.0.1:5501/index.html">
+                    <img src="img\pageconvertertemperature.jpg" alt="Objectos1">
+                    <div class="info-box">Converter Temperature</div>
+                </a>
+            </div>
+            <div class="Objectos1"> </div>
+        </section>
+
+        <section id="contacto" class="Contacto">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><strong>Email:</strong> fernanda.grimaldo018@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +57 304 682 6991</p>
+                    <p><strong>Ubicación:</strong> Medellín, Colombia</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://linkedin.com/in/mariafernanda" target="_blank">
+                        <img src="img\logolinkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/mariafernanda" target="_blank">
+                        <img src="img\Logoinstagram.png" alt="GitHub">
+                    </a>
+                    <a href="https://twitter.com/mariafernanda" target="_blank">
+                        <img src="img\logogithub.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -90,17 +175,23 @@
                 <button class="btn-trabajar">Trabajemos Juntos</button>
             </div>
 
-            <!-- Bottons social media -->
-            <div class="botones-sociales" style="margin-top: 12px;">
-                <button>
-                    <img src="img\Logoinstagram.png" style="width: 38px; height: 38px;">
-                </button>
-                <button>
-                    <img src="img\logogithub.png" style="width: 40px; height: 40px;">
-                </button>
-                <button>
-                    <img src="img\logolinkedin.png" style="width: 42px; height: 42px;">
-                </button>
+            <!-- Botons social media -->
+            <div class="botones-sociales" style="margin-top: 25px;">
+                <a href="https://www.instagram.com/ing.biomedica_est/">
+                    <button>
+                        <img src="img\Logoinstagram.png" style="width: 32px; height: 30px;">
+                    </button>
+                </a>
+                <a href="https://github.com/MafeSaavedra">
+                    <button>
+                        <img src="img\logogithub.png" style="width: 32px; height: 30px;">
+                    </button>
+                </a>
+                <a href="https://www.linkedin.com/in/mafesaavedra-biodeveloper/">
+                    <button>
+                        <img src="img\logolinkedin.png" style="width: 32px; height: 30px;">
+                    </button>
+                </a>
             </div>
 
         </div>

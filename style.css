@@ -9,6 +9,8 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     background-color: #332f33;
+    padding-top: 60px;
+
 }
 
 /* Navbar Styles */
@@ -17,7 +19,13 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 15px 20px;
-    background-color: #333;
+    background-color: #0c0c0c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+
 }
 
 /* Hide checkbox by default */
@@ -80,11 +88,12 @@ body {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: #000000;
         width: 100%;
         position: absolute;
         top: 60px;
         left: 0;
+        opacity: 90%;
     }
 
     /* Show the menu when the checkbox is checked */
@@ -127,7 +136,7 @@ main {
 
 .View {
     position: fixed;
-    top: 15vh;
+
     left: 30px;
     background-color: #0a0a0a8b;
     width: 25%;
@@ -164,13 +173,28 @@ main {
         padding: 25px;
     }
 
+    .Sobremi {
+        background-color: #0a0a0a8b;
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: 1150px;
+        margin-bottom: 25px;
+        margin-top: 120px;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+
 
 
     .View {
         position: relative;
         width: 81%;
         height: 700px;
-        top: auto;
+        top: 50px;
         left: auto;
         margin: 0 auto 20px;
     }
@@ -275,18 +299,39 @@ main {
         background-color: #5b95a8;
     }
 
+    .botones-sociales {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .botones-sociales a {
+        margin: 0 5px;
+        text-decoration: none;
+        /* Quitar subrayado del enlace */
+    }
+
     .botones-sociales button {
-        margin: 5px;
-        border-radius: 15px;
+        background-color: #0a000013;
+        /* Fondo blanco para los botones */
+        /* Borde gris claro */
+        border-radius: 5px;
+        /* Bordes redondeados */
         padding: 10px;
-        border: none;
+        /* Espacio interno */
         cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Cambiar cursor al pasar por encima */
+        transition: background-color 0.3s, border-color 0.3s;
+        /* Transiciones suaves */
     }
 
     .botones-sociales button:hover {
-        transform: scale(1.4);
+        background-color: #030000;
+        /* Fondo gris claro al pasar el mouse */
+        border-color: #888;
+        /* Cambiar color del borde al pasar el mouse */
     }
+
 
     /* First Section Content */
     .contenido-inicio {
@@ -331,43 +376,233 @@ main {
 
     .Proyectos {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         background-color: #0a0a0a8b;
         width: 95%;
-        height: 100%;
-        margin: 0 auto;
+        padding: 10px;
+        height: 1350px;
+        margin: 25px auto;
         border-radius: 15px;
         border: 1px solid #0a0a0a;
         text-align: center;
         overflow: hidden;
-        text-align: center;
-        padding: 40px;
     }
 
-    /* Objetos dentro del contenedor */
     .Objectos1 {
+        position: relative;
         margin: 0 auto;
         background-color: rgb(233, 225, 225);
-        height: 200px;
-        width: 70%;
+        height: 250px;
+        width: 280px;
         border-radius: 25px;
-        padding: 10px;
-        /* Agrega un padding interno */
-        box-sizing: border-box;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .Objectos1:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px 5px rgba(197, 132, 194, 0.8);
+        margin: 0 auto;
+    }
+
+    .info-box {
+        position: absolute;
+        bottom: 80px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+        margin: 0 auto;
+    }
+
+    .Objectos1:hover .info-box {
+        opacity: 70%;
+    }
+
+
+
+
+    .Objectos1 img {
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        margin: 0 auto;
     }
 
     .titulo-proyectos {
         grid-column: 1 / -1;
-        margin-top: 10px;
+        margin-top: 2px;
         font-size: 26px;
         color: white;
         text-align: center;
         padding: 10px;
         width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Sobremi {
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
         margin: 0 auto;
     }
+
+    .Sobremi h2 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .bio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .bio-card {
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bio-card:hover {
+        transform: scale(1.05);
+
+    }
+
+    .bio-card h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+    .Sobremi h2 {
+        font-size: 30px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+
+    .bio-card p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .tool-card img {
+        max-width: 30px;
+        /* Ajusta el tamaño máximo de los logos */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .tool-card img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 1px 12px rgba(255, 255, 255, 0.966);
+
+        /* Efecto zoom al hacer hover sobre los logos */
+    }
+
+    /* //CONTACTO INFO */
+    .Contacto {
+        background-color: rgba(10, 10, 10, 0.8);
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Contacto h2 {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        gap: 20px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        color: #ffffff;
+        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .contact-info strong {
+        color: #9ad4f0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        /* Detalle en color diferente */
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .social-media img:hover {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 768px) {
+        .contact-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .contact-info,
+        .social-media {
+            flex: 1;
+        }
+    }
+
 
 
 
@@ -380,7 +615,7 @@ main {
         top: 13vh;
         left: 30px;
         width: 28%;
-        height: 55%;
+        height: 65%;
         border-radius: 15px;
         z-index: 999;
         align-items: center;
@@ -407,10 +642,10 @@ main {
     }
 
 
-    .inicio,
-    .Sobremi,
-    .Proyectos,
-    .Contacto {
+
+
+    .Contacto,
+    .inicio {
         background-color: #0a0a0a8b;
         margin: 0 auto 25px;
         border-radius: 15px;
@@ -419,6 +654,23 @@ main {
         overflow: hidden;
         width: 95%;
         height: 700px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+        padding: 25px;
+        margin-top: 10px;
+    }
+
+
+
+    .Sobremi {
+        background-color: #0a0a0a8b;
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: 1000px;
         margin-bottom: 25px;
         box-sizing: border-box;
         padding: 25px;
@@ -452,7 +704,7 @@ main {
     }
 
     .botones-inicio button {
-        width: 55%;
+        width: 50%;
         font-size: 20px;
         margin: 0 auto;
         margin-bottom: 15px;
@@ -510,18 +762,39 @@ main {
 
 
 
+    .botones-sociales {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .botones-sociales a {
+        margin: 0 5px;
+        text-decoration: none;
+        /* Quitar subrayado del enlace */
+    }
+
     .botones-sociales button {
-        margin: 5px;
-        border-radius: 15px;
+        background-color: #0a000013;
+        /* Fondo blanco para los botones */
+        /* Borde gris claro */
+        border-radius: 5px;
+        /* Bordes redondeados */
         padding: 10px;
-        border: none;
+        /* Espacio interno */
         cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Cambiar cursor al pasar por encima */
+        transition: background-color 0.3s, border-color 0.3s;
+        /* Transiciones suaves */
     }
 
     .botones-sociales button:hover {
-        transform: scale(1.4);
+        background-color: #030000;
+        /* Fondo gris claro al pasar el mouse */
+        border-color: #888;
+        /* Cambiar color del borde al pasar el mouse */
     }
+
 
     /* First Section Content */
     .contenido-inicio {
@@ -567,6 +840,240 @@ main {
         color: white;
     }
 
+    /* //// POR MODIFICAR  */
+    .Proyectos {
+        margin-top: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 1200px;
+        margin: 0px auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .Objectos1 {
+        position: relative;
+        margin: 0 auto;
+        background-color: rgb(233, 225, 225);
+        height: 250px;
+        width: 280px;
+        border-radius: 25px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Objectos1:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px 5px rgba(197, 132, 194, 0.8);
+    }
+
+    .info-box {
+        position: absolute;
+        bottom: 80px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .Objectos1:hover .info-box {
+        opacity: 70%;
+    }
+
+
+
+
+    .Objectos1 img {
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .titulo-proyectos {
+        grid-column: 1 / -1;
+        margin-top: 2px;
+        font-size: 26px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Sobremi {
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Sobremi h2 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .bio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .bio-card {
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bio-card:hover {
+        transform: scale(1.05);
+
+    }
+
+    .bio-card h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+    .Sobremi h2 {
+        font-size: 30px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+
+    .bio-card p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .tool-card img {
+        max-width: 30px;
+        /* Ajusta el tamaño máximo de los logos */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .tool-card img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 1px 12px rgba(255, 255, 255, 0.966);
+
+        /* Efecto zoom al hacer hover sobre los logos */
+    }
+
+    /* //CONTACTO INFO */
+    .Contacto {
+        background-color: rgba(10, 10, 10, 0.8);
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Contacto h2 {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        gap: 20px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        color: #ffffff;
+        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .contact-info strong {
+        color: #9ad4f0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        /* Detalle en color diferente */
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .social-media img:hover {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 768px) {
+        .contact-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .contact-info,
+        .social-media {
+            flex: 1;
+        }
+    }
+
+
+
+
+
 
 }
 
@@ -577,12 +1084,11 @@ main {
 @media (min-width: 1024px) and (max-width: 1800px) {
 
     .inicio,
-    .Sobremi,
-    .Contacto {
+    .Sobremi {
         background-color: #0a0a0a8b;
         width: 95%;
         height: 600px;
-        margin: 10px auto;
+        margin: 25px auto;
         border-radius: 15px;
         border: 1px solid #0a0a0a;
         text-align: center;
@@ -601,7 +1107,6 @@ main {
         justify-content: center;
         overflow: hidden;
     }
-
 
     .Titulo {
         margin-top: 12px;
@@ -624,32 +1129,49 @@ main {
         height: auto;
     }
 
-
-
     .contenido-inicio {
         margin-top: 150px;
         text-align: center;
         font-weight: 400;
-        margin: 0 auto;
         max-width: 100%;
         box-sizing: border-box;
-
     }
 
     .contenido-inicio p {
         color: white;
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 300;
     }
 
-    .botones-inicio button {
-        width: 55%;
+
+    .botones-inicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 20px;
-        margin: 0 auto;
-        margin-bottom: 15px;
         padding: 15px;
-        margin: 20px;
+        gap: 10px;
+        text-align: center;
     }
+
+    .botones-inicio button {
+        font-size: 20px;
+        margin: 10px auto;
+        width: 250px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .btn-descargar {
+        background-color: #6faac0;
+        color: white;
+    }
+
+    .btn-trabajos {
+        background-color: #ff69b4;
+        color: white;
+    }
+
 
     .btn-trabajar {
         background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
@@ -665,28 +1187,20 @@ main {
         transition: background-color 0.3s ease;
     }
 
-
     .titulo-rosa {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         background: linear-gradient(to right, #569dd7, #ff69b4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 25px;
-        background-clip: text;
+        font-size: 35px;
         display: inline-block;
-        /* Asegúrate de que el texto sea un bloque en línea */
         transition: transform 0.3s ease;
-        /* Transición suave para el crecimiento */
     }
 
-    /* Efecto de hover */
     .titulo-rosa:hover {
         transform: scale(1.1);
-        /* Aumenta el tamaño de cada letra al hacer hover */
     }
-
-
 
     .botones-sociales button {
         margin: 5px;
@@ -701,18 +1215,7 @@ main {
         transform: scale(1.4);
     }
 
-    /* First Section Content */
-    .contenido-inicio {
-        margin-top: 150px;
-        text-align: center;
-        font-weight: 400;
-    }
-
-    /* Button Styles */
-    .botones-inicio {
-        margin-top: 40px;
-    }
-
+    /* Estilo para los botones generales */
     button {
         font-family: 'Poppins', sans-serif;
         padding: 10px 20px;
@@ -721,73 +1224,242 @@ main {
         cursor: pointer;
         font-weight: 400;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-
     }
 
     button:hover {
         box-shadow: 0 0 10px white, 0 0 20px white;
-        /* Ilumina el borde */
         transform: translateY(-2px);
-        /* Eleva el botón ligeramente */
     }
 
-
-    /* Download CV Button */
-    .btn-descargar {
-        background-color: #6faac0;
-        color: white;
-        margin-right: 15px;
-    }
-
-    /* My Works Button */
-    .btn-trabajos {
-        background-color: #ff69b4;
-        color: white;
-    }
+    /* Botones específicos */
 
     .Proyectos {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 40px;
+        gap: 20px;
         background-color: #0a0a0a8b;
         width: 95%;
         height: 700px;
-        margin: 10px auto;
+        margin: 0px auto;
         border-radius: 15px;
         border: 1px solid #0a0a0a;
         text-align: center;
         overflow: hidden;
-        padding: 40px;
+        padding: 20px;
     }
 
-    /* Objetos dentro del contenedor */
     .Objectos1 {
+        position: relative;
         margin: 0 auto;
         background-color: rgb(233, 225, 225);
-        height: 200px;
-        width: 70%;
+        height: 250px;
+        width: 280px;
         border-radius: 25px;
-        padding: 10px;
-        /* Agrega un padding interno */
-        box-sizing: border-box;
-        /* Asegura que el padding no afecte el ancho */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Objectos1:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px 5px rgba(197, 132, 194, 0.8);
+    }
+
+    .info-box {
+        position: absolute;
+        bottom: 80px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .Objectos1:hover .info-box {
+        opacity: 70%;
+    }
+
+
+
+
+    .Objectos1 img {
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
     }
 
     .titulo-proyectos {
         grid-column: 1 / -1;
-        /* Ocupa toda la fila */
-        margin-top: 10px;
-        /* Ajusta según sea necesario */
+        margin-top: 2px;
         font-size: 26px;
-        /* Tamaño de fuente para el título */
         color: white;
-        /* Color del texto */
         text-align: center;
-        /* Centrar el texto */
         padding: 10px;
-        /* Espaciado alrededor del título */
         width: 100%;
-        /* Asegura que ocupe todo el ancho disponible */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
     }
+
+    .Sobremi {
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Sobremi h2 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .bio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .bio-card {
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bio-card:hover {
+        transform: scale(1.05);
+
+    }
+
+    .bio-card h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+    .Sobremi h2 {
+        font-size: 30px;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+
+    .bio-card p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .tool-card img {
+        max-width: 30px;
+        /* Ajusta el tamaño máximo de los logos */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .tool-card img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 1px 12px rgba(255, 255, 255, 0.966);
+
+        /* Efecto zoom al hacer hover sobre los logos */
+    }
+
+    /* //CONTACTO INFO */
+    .Contacto {
+        background-color: rgba(10, 10, 10, 0.8);
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Contacto h2 {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        gap: 20px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        color: #ffffff;
+        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .contact-info strong {
+        color: #9ad4f0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        /* Detalle en color diferente */
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .social-media img:hover {
+        transform: scale(1.2);
+    }
+
+    @media (min-width: 768px) {
+        .contact-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .contact-info,
+        .social-media {
+            flex: 1;
+        }
+    }
+
+
+
 
 }
