@@ -1,0 +1,495 @@
+@media (min-width: 1024px) and (max-width: 1900px) {
+
+    .inicio,
+    .Sobremi {
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 600px;
+        margin: 25px auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .aboutMi {
+        align-content: center;
+        text-align: justify;
+        font-size: 80px;
+    }
+
+    .View {
+        position: fixed;
+        top: 16vh;
+        left: 30px;
+        width: 28%;
+        height: 650px;
+        border-radius: 15px;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .Titulo {
+        margin-top: 12px;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .Avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .Avatar img {
+        width: 170px;
+        height: auto;
+    }
+
+    .contenido-inicio {
+        margin-top: 150px;
+        text-align: center;
+        font-weight: 400;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contenido-inicio p {
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+
+    .botones-inicio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .botones-inicio button {
+        font-size: 20px;
+        margin: 10px auto;
+        width: 250px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .btn-descargar {
+        background-color: #6faac0;
+        color: white;
+    }
+
+    .btn-trabajos {
+        background-color: #ff69b4;
+        color: white;
+    }
+
+
+    .btn-trabajar {
+        background: linear-gradient(to right, #e4e9ec, #6faac0, #ae71b0);
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 19px;
+        width: 80%;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        transition: background-color 0.3s ease;
+    }
+
+    .titulo-rosa {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        background: linear-gradient(to right, #569dd7, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 35px;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .titulo-rosa:hover {
+        transform: scale(1.1);
+    }
+
+    .botones-sociales button {
+        margin: 5px;
+        border-radius: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .botones-sociales button:hover {
+        transform: scale(1.4);
+    }
+
+    /* Estilo para los botones generales */
+    button {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 400;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+        box-shadow: 0 0 10px white, 0 0 20px white;
+        transform: translateY(-2px);
+    }
+
+    /* Botones específicos */
+
+    .Proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+        background-color: #0a0a0a8b;
+        width: 95%;
+        height: 700px;
+        margin: 0px auto;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .Objectos1 {
+        position: relative;
+        margin: 0 auto;
+        background-color: rgb(233, 225, 225);
+        height: 250px;
+        width: 280px;
+        border-radius: 25px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Objectos1:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px 5px rgba(197, 132, 194, 0.8);
+    }
+
+    .info-box,
+    .info-box2 {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .info-box {
+        bottom: 80px;
+        margin-left: 19%;
+        margin-top: 50px;
+    }
+
+    .info-box2 {
+        bottom: 45px;
+        margin-left: 35%;
+        margin-top: 50px;
+    }
+
+
+
+
+    .Objectos1:hover .info-box,
+    .Objectos1:hover .info-box2 {
+        opacity: 70%;
+    }
+
+
+
+
+    .Objectos1 img {
+        max-width: 80%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .titulo-proyectos {
+        grid-column: 1 / -1;
+        margin-top: 2px;
+        font-size: 26px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Sobremi {
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Sobremi h2 {
+        font-size: 36px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .bio-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .bio-card {
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bio-card:hover {
+        transform: scale(1.05);
+
+    }
+
+    .bio-card h3 {
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+    .Sobremi h2 {
+        font-size: 30px;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+
+    }
+
+
+    .bio-card p {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    .tool-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+
+    .tool-card img {
+        margin-top: 4px;
+        max-width: 64px;
+        /* Ajusta el tamaño máximo de los logos */
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+
+
+
+
+    .tool-card {
+        flex: 0 0 auto;
+        margin: 0 15px;
+    }
+
+    .tool-logo {
+        max-width: 40px;
+        /* Ajusta el tamaño máximo de los logos */
+        height: auto;
+        transition: transform 0.1s ease;
+        border-radius: 10px;
+    }
+
+    .tool-logo:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(1px 3px 3px #fffefe);
+
+    }
+
+    /* Animación para el efecto de desplazamiento continuo */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-10%);
+        }
+    }
+
+
+    /* Estilos generales para la sección de contacto */
+    .Contacto {
+        background-color: rgba(10, 10, 10, 0.8);
+        margin: 0 auto 25px;
+        border-radius: 15px;
+        border: 1px solid #0a0a0a;
+        text-align: center;
+        overflow: hidden;
+        width: 95%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .Contacto h2 {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    /* Contenedor de contacto para la disposición de dos columnas */
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        color: #ffffff;
+        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .contact-info strong {
+        color: #9ad4f0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .social-media img {
+        width: 40px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .social-media img:hover {
+        transform: scale(1.2);
+    }
+
+    /* Estilos para el formulario de contacto */
+    .contact-form {
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h3 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #666;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .contact-form button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos responsivos para pantallas más grandes */
+    @media (min-width: 768px) {
+        .contact-container {
+            flex-direction: row;
+            gap: 40px;
+            /* Espacio entre las columnas */
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-info {
+            margin-right: 20px;
+            /* Espacio entre la información de contacto y el formulario */
+        }
+    }
+
+
+
+
+
+}
