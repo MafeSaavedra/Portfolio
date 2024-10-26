@@ -3,6 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
@@ -22,6 +23,7 @@ h3 {
     width: 95%;
     margin: 25px auto;
     align-items: center;
+    overflow: hidden;
 
 
 }
@@ -185,6 +187,3 @@ time {
         border-color: transparent #f45bf1 transparent transparent;
     }
 }
-
-/* FOOTER STYLES
-–––––––––––––––––––––

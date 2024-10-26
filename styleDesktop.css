@@ -12,6 +12,16 @@
         overflow: hidden;
     }
 
+    h4 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #413e3e;
+        font-size: 20px;
+        margin-bottom: 15px;
+
+
+    }
+
     .aboutMi {
         align-content: center;
         text-align: justify;
@@ -125,17 +135,16 @@
         transform: scale(1.1);
     }
 
-    .botones-sociales button {
+    .botones-sociales img {
         margin: 5px;
-        border-radius: 15px;
-        padding: 10px;
         border: none;
-        cursor: pointer;
+
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .botones-sociales button:hover {
+    .botones-sociales img:hover {
         transform: scale(1.4);
+        filter: drop-shadow(1px 3px 3px #fffefe);
     }
 
     /* Estilo para los botones generales */
@@ -236,7 +245,7 @@
     .titulo-proyectos {
         grid-column: 1 / -1;
         margin-top: 2px;
-        font-size: 26px;
+        font-size: 30px;
         color: white;
         text-align: center;
         padding: 10px;
@@ -355,7 +364,7 @@
 
     /* Estilos generales para la sección de contacto */
     .Contacto {
-        background-color: rgba(10, 10, 10, 0.8);
+        background-color: rgba(10, 10, 10, 0.577);
         margin: 0 auto 25px;
         border-radius: 15px;
         border: 1px solid #0a0a0a;
@@ -371,50 +380,53 @@
     }
 
     .Contacto h2 {
-        font-size: 36px;
+        font-size: 30px;
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         color: #ffffff;
         margin-bottom: 30px;
-        text-transform: uppercase;
+
     }
 
     /* Contenedor de contacto para la disposición de dos columnas */
     .contact-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Define dos columnas de igual tamaño */
         justify-content: space-between;
         align-items: flex-start;
         gap: 20px;
+        /* Espacio entre las columnas */
     }
 
     .contact-info {
         flex: 1;
+
     }
 
     .contact-info p {
-        font-size: 18px;
+        font-size: 20px;
         color: #ffffff;
         margin: 10px 0;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
+        text-align: start;
+        margin-top: 20px;
     }
 
-    .contact-info strong {
-        color: #9ad4f0;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-    }
+
 
     .social-media {
         display: flex;
         justify-content: center;
         gap: 20px;
+        margin-top: 15px;
     }
 
     .social-media a {
         display: inline-block;
         text-decoration: none;
+        margin-top: 15px;
     }
 
     .social-media img {
@@ -432,8 +444,10 @@
         flex: 1;
         background-color: #f9f9f9;
         padding: 20px;
+        width: 80%;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
     }
 
     .contact-form h3 {
@@ -444,20 +458,20 @@
     .contact-form label {
         display: block;
         margin: 10px 0 5px;
-        color: #666;
+        color: #413e3e;
     }
 
     .contact-form input,
     .contact-form textarea {
-        width: 100%;
+        width: 95%;
         padding: 10px;
         margin-bottom: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid #d861cc;
         border-radius: 4px;
     }
 
     .contact-form button {
-        background-color: #007BFF;
+        background-color: #d861cc;
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -466,7 +480,7 @@
     }
 
     .contact-form button:hover {
-        background-color: #0056b3;
+        background-color: #b565e7;
     }
 
     /* Estilos responsivos para pantallas más grandes */
