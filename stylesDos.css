@@ -187,3 +187,17 @@ time {
         border-color: transparent #f45bf1 transparent transparent;
     }
 }
+
+.btn-ver-codigo {
+    background-color: #0b0b0b;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-ver-codigo:hover {
+    background-color: #8e3e71;
+}
