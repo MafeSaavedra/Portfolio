@@ -378,21 +378,10 @@ a {
         color: white;
     }
 
-    .Proyectos {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        background-color: #0a0a0a8b;
-        width: 95%;
-        padding: 10px;
-        height: 1350px;
-        margin: 25px auto;
-        border-radius: 15px;
-        border: 1px solid #0a0a0a;
-        text-align: center;
-        overflow: hidden;
-    }
+
 
     .Objectos1 {
+        display: flex;
         position: relative;
         margin: 0 auto;
         background-color: rgb(233, 225, 225);
@@ -400,7 +389,6 @@ a {
         width: 280px;
         border-radius: 25px;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -412,38 +400,28 @@ a {
         margin: 0 auto;
     }
 
-    .info-box {
-        position: absolute;
-        bottom: 30%;
-        left: 50%;
-        /* Centra horizontalmente */
-        transform: translateX(-50%);
-        /* Ajuste para el centrado */
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-        font-size: 14px;
-        opacity: 0;
-        /* Comienza oculto */
-        transition: opacity 0.3s ease;
-        white-space: nowrap;
-        /* Evita el salto de línea */
-    }
 
-    .Objectos1:hover .info-box {
-        opacity: 70%;
-    }
 
+    .Objetos1_card3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        width: 80%;
+        border: 1px solid rgb(12, 139, 113);
+    }
 
 
 
     .Objectos1 img {
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
         object-fit: contain;
         border-radius: 10px;
         margin: 0 auto;
+        border: 1px solid black;
+
     }
 
     .titulo-proyectos {
